@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import "owl.carousel.css";
+@import "owl.theme.default.css";
+
+@mixin h4() {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #008ed6;
+	
+}
+
+@mixin p {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: #999999;
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.d-flex{
+	display: flex;
+}
+.first{
+	background-image: url(../images/bg-top_01.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 43px 135px 110px 136px;
+	header{
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 103px;
+		.logo{
+			text-decoration: none;
+			text-transform: uppercase;
+			font-family: 'Quicksand', sans-serif;
+			font-size: 24px;
+			color: #fff;
+			display: inline-block;
+			&:hover{
+				color: #008ed6;
+			}
+		}
+		
+		nav{
+			display: inline-block;
+			ul{
+				li{
+					display: inline;
+					// color: #fffefe;
+					// font-family: 'Source Sans Pro', sans-serif;
+					// font-weight: 600;
+					padding-bottom: 13px;
+					margin-left: 23px;
+					a{
+						text-decoration: none;
+						color: #fffefe;
+						font-family: 'Source Sans Pro', sans-serif;
+						font-weight: 600;						
+					}
+					&:hover{
+						border-bottom: 4px solid #008ed6;
+					}
+				}
+				
+			}
+		}
+		
+		
+	}
+	.title{
+		max-width: 490px;
+		h4{
+			@include h4;
+			margin-bottom: 30px;
+		}
+		h1{
+			font-family: 'Source Sans Pro', sans-serif;
+			font-weight: 600;
+			font-size: 48px;
+			color: #fff;
+			margin-bottom: 28px;	
+		}
+		p{
+			@include p;
+			line-height: 26px;
+			margin-bottom: 63px;
+		}
+		button{
+			font-family: 'Source Sans Pro', sans-serif;
+			font-weight: 700;
+			font-size: 14px;
+			color: #fff;
+			text-transform: uppercase;
+			padding: 19px 0 19px;
+			border: 1px solid #454449;
+			width: 160px;
+			background-color: rgba(0, 0, 0, 0);
+			border-radius: 3px;;
+			text-align: center;
+			margin-right: 20px;
+			transition: 0.3s;
+			&:hover{
+				background-color: #008ed6;	
+				border: none;
+			}
+		}
+	}
+	
+}

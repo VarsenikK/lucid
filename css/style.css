@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+@import url(d:\HTML\lucid\lucid\css\owl.carousel.css);
+@import url(d:\HTML\lucid\lucid\css\owl.theme.default.css);
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.first {
+  background-image: url(../images/bg-top_01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 43px 135px 110px 136px;
+}
+
+.first header {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 103px;
+}
+
+.first header .logo {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  display: inline-block;
+}
+
+.first header .logo:hover {
+  color: #008ed6;
+}
+
+.first header nav {
+  display: inline-block;
+}
+
+.first header nav ul li {
+  display: inline;
+  padding-bottom: 13px;
+  margin-left: 23px;
+}
+
+.first header nav ul li a {
+  text-decoration: none;
+  color: #fffefe;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+}
+
+.first header nav ul li:hover {
+  border-bottom: 4px solid #008ed6;
+}
+
+.first .title {
+  max-width: 490px;
+}
+
+.first .title h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #008ed6;
+  margin-bottom: 30px;
+}
+
+.first .title h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 28px;
+}
+
+.first .title p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #999999;
+  line-height: 26px;
+  margin-bottom: 63px;
+}
+
+.first .title button {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 19px 0 19px;
+  border: 1px solid #454449;
+  width: 160px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  text-align: center;
+  margin-right: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.first .title button:hover {
+  background-color: #008ed6;
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */
