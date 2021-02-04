@@ -10,13 +10,25 @@
 	color: #008ed6;
 	
 }
-
+@mixin h3() {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	font-size: 36px;
+	color: #1a1a1a;
+	
+}
 @mixin p {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 400;
 	font-size: 18px;
 	color: #999999;
 }
+@mixin max-screen($res) {
+	@media screen and (max-width: $res) {
+	  @content;
+	}
+ }
+
 *{
 	padding: 0;
 	margin: 0;
@@ -30,6 +42,9 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 43px 135px 110px 136px;
+	@include max-screen(768px) {
+		padding: 30px 15px;
+	 }
 	header{
 		justify-content: space-between;
 		align-items: center;
@@ -45,33 +60,112 @@
 				color: #008ed6;
 			}
 		}
-		
+
+		//****BURGER MENU***//
 		nav{
-			display: inline-block;
-			ul{
-				li{
-					display: inline;
-					// color: #fffefe;
-					// font-family: 'Source Sans Pro', sans-serif;
-					// font-weight: 600;
-					padding-bottom: 13px;
-					margin-left: 23px;
-					a{
-						text-decoration: none;
-						color: #fffefe;
-						font-family: 'Source Sans Pro', sans-serif;
-						font-weight: 600;						
+			display: block;
+			padding: 0;
+			margin: 0;
+		   .menu{
+			list-style-type: none;
+			padding: 0;
+			margin-top: 20px;
+			li{
+				display: inline-block;
+				padding-bottom: 13px;
+				margin-left: 23px;
+				a{
+					text-decoration: none;
+					color: #fffefe;
+					font-family: 'Source Sans Pro', sans-serif;
+					font-weight: 600;
+					display: block;
+				 }
+				 &:after{
+					content: url("../images/line_03.png");
+					display: block;
+					margin: 0 auto;
+					opacity: 0;						
 					}
 					&:hover{
-						border-bottom: 4px solid #008ed6;
+						&:after{
+							opacity: 1;
+						}
 					}
+			 }
+		 }
+	 
+		 .wrapper{
+			max-width: 1024px;
+			padding: 10px;
+			margin: 0px auto;
+		 	.menuToggle{  
+			  color: #fff;
+			  padding: 10px 15px;
+			  cursor: pointer;
+			  display: none;
+		 	}
+		 	 @media( max-width: 640px){
+			  	.menuToggle{
+					display: block;
+			  }
+			  .menu{
+					display: none;
+					position: absolute;
+					overflow: hidden;
+					// width: 100%;
+					margin-left: -65px;
+					
+					li{
+					display: block;
+					
+			  		}
 				}
-				
+		 	}	 
+			 .icon {
+			  width: 25px;
+			  height: 25px;
+			  cursor: pointer;
+		 	  .hamburger {
+			  width: 40px;
+			  height: 4px;
+			  transform: translate(-50%, -50%);
+			  background: #fff;
+			  transition: 0.5s;
+			  display: inline-block;
+			  margin-left: 12px;
+		 	  }		 
+		 		.hamburger:before,
+		 		.hamburger:after {
+			  		content: "";
+			  	   width: 40px;
+			 		height: 4px;
+			  		position: absolute;
+			 		background: #fff;
+			 		transition: 0.5s;
+					}		 
+					.hamburger:before {
+						top: -16px;
+					}
+		 		 		.hamburger:after {
+			  		top: 16px;
+		 			}
+					.icon.active .hamburger {
+						background: rgba(0, 0, 0, 0);
+					}		 
+					.icon.active .hamburger:before {
+			  			top: 0;
+			  			transform: rotate(45deg);
+			 		}		 
+		 			.icon.active .hamburger:after {
+			  		top: 0;
+			 		transform: rotate(135deg);
+		 			}
+				}
 			}
 		}
-		
-		
-	}
+	}		
+}
 	.title{
 		max-width: 490px;
 		h4{
@@ -111,4 +205,20 @@
 		}
 	}
 	
+.list{
+	padding: 66px 155px 78px;
+	h4{
+		@include h4;
+		text-align: center;
+	}
+	h3{
+		@include h3;
+		text-align: center;
+		&:after{
+			content: url("../images/line_03.png");
+			display: block;
+			margin: 35px auto 0;
+		}
+	}
+		
 }
