@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap");
 @import url(owl.carousel.css);
 @import url(owl.theme.default.css);
 * {
@@ -217,8 +217,6 @@
   border-radius: 3px;
   text-align: center;
   margin-right: 20px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 @media (max-width: 1100px) {
@@ -506,20 +504,182 @@
   font-size: 15px;
 }
 
+.carousel .owl-dots {
+  text-align: center;
+}
+
 .carousel .owl-dots .owl-dot {
   outline: none;
 }
 
-.carousel .owl-dots .owl-dot .owl-dots .owl-dot span {
+.carousel .owl-dots .owl-dot span {
   display: inline-block;
-  background-color: #021725;
-  width: 20px;
-  height: 20px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  margin: 5px;
+  border: 1px solid #4c484a;
+  margin: 11px;
 }
 
-.carousel .owl-dots .owl-dot .owl-dots .owl-dot span .owl-dots .owl-dot.active span {
-  background-color: #505d68;
+.carousel .owl-dots .owl-dot.active span {
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+}
+
+.black {
+  background: #15141a;
+  padding: 60px 0;
+}
+
+.black .black_ {
+  max-width: 1170px;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.black .black_ p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  color: #fff;
+}
+
+.black .black_ p span {
+  font-weight: 600;
+}
+
+.black .black_ button {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 19px 30px;
+  border: 1px solid #444348;
+  border-radius: 4px;
+  background-color: rgba(1, 1, 1, 0);
+  color: #fff;
+  text-transform: uppercase;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.black .black_ button:hover {
+  background-color: #008ed6;
+  border: 1px solid #008ed6;
+}
+
+/*.....CUPON....*/
+.cupon {
+  padding: 60px 0;
+  max-width: 1170px;
+  margin: auto;
+}
+
+.cupon h5 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #008ed6;
+  text-align: center;
+}
+
+.cupon h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.cupon h3:after {
+  content: url("../images/line_03.png");
+  display: block;
+}
+
+.cupon .container {
+  width: 270px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  margin: 0 8px;
+}
+
+.cupon .container .name {
+  padding: 29px 0 24px;
+  border-bottom: 1px solid #e0e0e0;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+
+.cupon .container .number {
+  padding: 43px 0 35px;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #999999;
+}
+
+.cupon .container .number span {
+  font-size: 60px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.cupon .container .info {
+  padding: 51px 35px 28px;
+}
+
+.cupon .container .info p {
+  margin-bottom: 43px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #999999;
+}
+
+.cupon .container .info p span {
+  color: #008ed6;
+}
+
+.cupon .container .info button {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 19px 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: rgba(1, 1, 1, 0);
+  color: #008ed6;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+.cupon .container:hover .name {
+  color: #008ed6;
+}
+
+.cupon .container:hover .number {
+  background-color: #008ed6;
+  color: #fff;
+}
+
+.cupon .container:hover .number span {
+  color: #fff;
+}
+
+.cupon .container:hover button {
+  background-color: #008ed6;
+  border: 1px solid #008ed6;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
