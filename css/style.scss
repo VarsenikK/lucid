@@ -522,6 +522,9 @@
 				font-family: 'Source Sans Pro', sans-serif;
 				font-weight: 600;
 				color: #1a1a1a;
+				sup{
+					font-size: 24px;
+				}
 			}
 			
 		}
@@ -570,3 +573,99 @@
 		}			
 	}
 }
+.contact{
+	background-color: #ededed;
+	padding: 60px 0 370px;
+	position: relative;
+	h5{
+		@include h5;
+		text-align: center;
+	}
+	h3{
+		@include h3;
+		text-align: center;
+		margin-bottom: 59px;
+		&:after{
+			content: url("../images/line_03.png");
+			display: block;
+		}
+	}
+	.container{
+		max-width: 977px;
+		margin: auto;
+		justify-content: space-between;
+		.item{
+			img{
+				display: block;
+				margin: 0 auto 32px;
+				transition: 0.3s;
+				&:hover{
+					transform: scale(1.3);
+				}
+			}
+			p{
+				font-family: 'Source Sans Pro', sans-serif;
+				font-weight: 400;
+				font-size: 18px;
+				color: #999999;
+				text-align: center;
+				margin-bottom: 12px;
+			}
+		}
+	}
+	.form_{
+		position: absolute;
+		flex-wrap: wrap;
+		bottom: -64px;
+		left: 30%;
+		background-color: #15141a;
+		padding: 59px 85px 40px 66px;
+		width: 770px;
+		min-height: 360px;
+		input{
+			padding: 19px 0 19px 17px;
+			background-color: #15141a;
+			border: 1px solid #444348;
+			border-radius: 3px;
+			width: 300px;
+			margin:0 19px 20px 0;
+			outline: none;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-weight: 400;
+			color: #fff;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+		textarea{
+			padding: 19px 0 19px 17px;
+			background-color: #15141a;
+			border: 1px solid #444348;
+			resize: none;
+			width: 300px;
+			height: 205px;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-weight: 400;
+			font-size: 12px;
+			text-transform: uppercase;
+			outline: none;
+			color: #fff;
+			margin-bottom: 21px;
+		}
+		button{
+			font-family: 'Source Sans Pro', sans-serif;
+			font-weight: 600;
+			font-size: 14px;
+			padding: 19px 30px;			
+			border-radius: 4px;
+			background-color: #008ed6;
+			border: 1px solid #008ed6;
+			color: #fff;
+			text-transform: uppercase;
+			margin-left: 20px;
+			outline: none;
+			float: right;
+		}
+	}
+
+}
+
