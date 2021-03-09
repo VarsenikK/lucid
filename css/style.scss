@@ -2,6 +2,11 @@
 @import url(owl.carousel.css);
 @import url(owl.theme.default.css);
 
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+
 @mixin h5() {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 700;
@@ -668,4 +673,31 @@
 	}
 
 }
+.map{
+	margin-bottom: -4px;
+}
 
+	footer{
+		background-color: #15141a;
+		padding: 55px 0 56px;
+		text-align: center;
+		color: #444348;
+		font-size: 14px;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 600;
+		text-transform: uppercase;
+		a{
+			i{
+				margin: 0 16px 31px;
+				font-size: 20px;
+				color: #444348;
+				transition: 0.3s;
+				&:hover{
+					color: #008ed6;
+				}
+			}
+			
+		}
+		
+	}
+}
