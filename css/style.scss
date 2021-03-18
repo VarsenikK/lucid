@@ -370,6 +370,9 @@ box-sizing: border-box;
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 65px 135px 60px;
+	@include max-screen(1100px){
+		padding: 15px;
+	}
 	h5{
 		@include h5;
 		text-align: center;
@@ -386,6 +389,9 @@ box-sizing: border-box;
 	}
 	.item{
 		margin: 23px;
+		@include max-screen(1100px){
+			padding: 15px;
+		}
 		p{
 			font-size: 24px;
 			color: #fff;
@@ -405,20 +411,7 @@ box-sizing: border-box;
 		}
 		
 	}
-// 	.owl-dots .owl-dot {
-// 		outline: none;
-// 		.owl-dots .owl-dot span {
-// 			display: inline-block;
-// 			background-color: red;
-// 			width: 20px;
-// 			height: 20px;
-// 			border-radius: 50%;
-// 			margin: 5px;
-// 			.owl-dots .owl-dot.active span {
-// 				background-color: #fff;
-// 		  }
-// 	  }
-//   }
+	
 .owl-dots {
 	text-align: center;
 
@@ -501,87 +494,99 @@ box-sizing: border-box;
 			display: block;
 		}
 	}
-	.container{
-		width: 270px;
-		
-		text-align: center;
-		border: 1px solid #e0e0e0;
-		margin: 0 8px;
-		.name{
-			padding: 29px 0 24px;
-			border-bottom: 1px solid #e0e0e0;
-			text-transform: uppercase;
-			font-size: 24px;
-			font-family: 'Source Sans Pro', sans-serif;
-			font-weight: 700;
+	.wrapper{
+		@include max-screen(1024px){
+			flex-wrap: wrap;
+			justify-content: center;
 		}
-		.number{
-			padding: 43px 0 35px;
-			border-bottom: 1px solid #e0e0e0;
-			font-family: 'Source Sans Pro', sans-serif;
-			font-weight: 400;
-			font-size: 18px;
-			color: #999999;
-			span{
-				font-size: 60px;
-				font-family: 'Source Sans Pro', sans-serif;
-				font-weight: 600;
-				color: #1a1a1a;
-				sup{
-					font-size: 24px;
-				}
+		.container{
+			width: 270px;			
+			text-align: center;
+			border: 1px solid #e0e0e0;
+			margin: 0 8px;
+			@include max-screen(1100px){
+				flex-wrap: wrap;
+				margin-bottom: 15px;
 			}
-			
-		}
-		.info{
-			padding: 51px 35px 28px;
-			p{
-				margin-bottom: 43px;
+			.name{
+				padding: 29px 0 24px;
+				border-bottom: 1px solid #e0e0e0;
+				text-transform: uppercase;
+				font-size: 24px;
 				font-family: 'Source Sans Pro', sans-serif;
-				font-weight: 400;				
+				font-weight: 700;
+			}
+			.number{
+				padding: 43px 0 35px;
+				border-bottom: 1px solid #e0e0e0;
+				font-family: 'Source Sans Pro', sans-serif;
+				font-weight: 400;
 				font-size: 18px;
 				color: #999999;
 				span{
+					font-size: 60px;
+					font-family: 'Source Sans Pro', sans-serif;
+					font-weight: 600;
+					color: #1a1a1a;
+					sup{
+						font-size: 24px;
+					}
+				}
+				
+			}
+			.info{
+				padding: 51px 35px 28px;
+				p{
+					margin-bottom: 43px;
+					font-family: 'Source Sans Pro', sans-serif;
+					font-weight: 400;				
+					font-size: 18px;
+					color: #999999;
+					span{
+						color:#008ed6;
+					}
+				}
+				button{
+					font-family: 'Source Sans Pro', sans-serif;
+					font-weight: 600;
+					font-size: 14px;
+					padding: 19px 30px;
+					border: 1px solid #e0e0e0;
+					border-radius: 4px;
+					background-color: rgba(1,1,1, 0);
 					color:#008ed6;
+					text-transform: uppercase;
+					margin-left: 20px;			
 				}
 			}
-			button{
-				font-family: 'Source Sans Pro', sans-serif;
-				font-weight: 600;
-				font-size: 14px;
-				padding: 19px 30px;
-				border: 1px solid #e0e0e0;
-				border-radius: 4px;
-				background-color: rgba(1,1,1, 0);
-				color:#008ed6;
-				text-transform: uppercase;
-				margin-left: 20px;			
-			}
-		}
-		
-		&:hover{
-			.name{
-				color: #008ed6;
-			}
-			.number{
-				background-color: #008ed6;
-				color: #fff;
-				span{
+			
+			&:hover{
+				.name{
+					color: #008ed6;
+				}
+				.number{
+					background-color: #008ed6;
+					color: #fff;
+					span{
+						color: #fff;
+					}
+				}
+				button{
+					background-color: #008ed6;
+					border: 1px solid #008ed6;
 					color: #fff;
 				}
-			}
-			button{
-				background-color: #008ed6;
-				border: 1px solid #008ed6;
-				color: #fff;
-			}
-		}			
+			}			
+		}
 	}
 }
 .contact{
 	background-color: #ededed;
 	padding: 60px 0 370px;
 	position: relative;
+	@media ( max-width: 1100px) {
+		padding: 15px;
+	}
 	h5{
 		@include h5;
 		text-align: center;
@@ -599,6 +604,10 @@ box-sizing: border-box;
 		max-width: 977px;
 		margin: auto;
 		justify-content: space-between;
+		@include max-screen(1024px){
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 		.item{
 			img{
 				display: block;
@@ -615,6 +624,9 @@ box-sizing: border-box;
 				color: #999999;
 				text-align: center;
 				margin-bottom: 12px;
+				@include max-screen(1024px){
+					margin: 15px;
+				}
 			}
 		}
 	}
@@ -627,48 +639,82 @@ box-sizing: border-box;
 		padding: 59px 85px 40px 66px;
 		width: 770px;
 		min-height: 360px;
-		input{
-			padding: 19px 0 19px 17px;
-			background-color: #15141a;
-			border: 1px solid #444348;
-			border-radius: 3px;
-			width: 300px;
-			margin:0 19px 20px 0;
-			outline: none;
-			font-family: 'Source Sans Pro', sans-serif;
-			font-weight: 400;
-			color: #fff;
-			font-size: 12px;
-			text-transform: uppercase;
+		@include max-screen(1600px){
+			padding: 15px;
+			left: 10%;
+			
+			flex-wrap: wrap;
 		}
-		textarea{
-			padding: 19px 0 19px 17px;
-			background-color: #15141a;
-			border: 1px solid #444348;
-			resize: none;
-			width: 300px;
-			height: 205px;
-			font-family: 'Source Sans Pro', sans-serif;
-			font-weight: 400;
-			font-size: 12px;
-			text-transform: uppercase;
-			outline: none;
-			color: #fff;
-			margin-bottom: 21px;
+		@include max-screen(1103px){
+			position: relative;
+			left: 10%;
 		}
-		button{
-			font-family: 'Source Sans Pro', sans-serif;
-			font-weight: 600;
-			font-size: 14px;
-			padding: 19px 30px;			
-			border-radius: 4px;
-			background-color: #008ed6;
-			border: 1px solid #008ed6;
-			color: #fff;
-			text-transform: uppercase;
-			margin-left: 20px;
-			outline: none;
-			float: right;
+		@include max-screen(960px){
+			left: 5%;
+		}
+		@include max-screen(768px){
+			// margin: 15px;
+			width: 100%;
+		}
+		@include max-screen(420px){
+			// width: 390px;
+		}
+		@include max-screen(320px){
+			// width: 290px;
+		}
+		.d-flex{
+			@include max-screen(1024px){
+				flex-wrap: wrap;
+			}
+			input{
+				padding: 19px 0 19px 17px;
+				background-color: #15141a;
+				border: 1px solid #444348;
+				border-radius: 3px;
+				width: 300px;
+				margin:0 19px 20px 0;
+				outline: none;
+				font-family: 'Source Sans Pro', sans-serif;
+				font-weight: 400;
+				color: #fff;
+				font-size: 12px;
+				text-transform: uppercase;
+				@include max-screen(320px){
+					width: 250px;
+				}
+			}
+			textarea{
+				padding: 19px 0 19px 17px;
+				background-color: #15141a;
+				border: 1px solid #444348;
+				resize: none;
+				width: 300px;
+				height: 205px;
+				font-family: 'Source Sans Pro', sans-serif;
+				font-weight: 400;
+				font-size: 12px;
+				text-transform: uppercase;
+				outline: none;
+				color: #fff;
+				margin-bottom: 21px;
+				@include max-screen(320px){
+					width: 250px;
+				}
+			}
+			button{
+				font-family: 'Source Sans Pro', sans-serif;
+				font-weight: 600;
+				font-size: 14px;
+				padding: 19px 30px;			
+				border-radius: 4px;
+				background-color: #008ed6;
+				border: 1px solid #008ed6;
+				color: #fff;
+				text-transform: uppercase;
+				margin-left: 20px;
+				outline: none;
+				float: right;
+			}
 		}
 	}
 
